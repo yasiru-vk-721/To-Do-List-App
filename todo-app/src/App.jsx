@@ -1,13 +1,12 @@
+import React from 'react'
+import Navbar from './components/Navbar'
+import Todo from './components/Todo'
 
-function App() {
-
-
+const App = () => {
   return (
     <>
-      <div>
-        <h1 className='m-12'>Hellow..</h1>
-       {/* comment */}
-      </div>
+      <Navbar/>
+      <Todo/>
     </>
   )
 }
