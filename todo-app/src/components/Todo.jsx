@@ -10,7 +10,8 @@ const Todo = () => {
   let newTask = [];
 
   const handleInputChange= (event) =>{
-    setTaskName(event.target.value);
+    setTaskName(event.target.value === "" ?  null : event.target.value);
+
   }
 
   const handleButtonClick = () => {
@@ -21,6 +22,7 @@ const Todo = () => {
     };
     console.log(newTask);
     setTaskList((prevTasks) => [...prevTasks, newTask])
+    setTaskName('')
   }
 
 
@@ -42,7 +44,7 @@ const Todo = () => {
                 <ul>
                    {taskList.map((task, index) => (
                     <li key={index}>
-                        <TodoItems prop = {task.taskName}/>
+                        <TodoItems props={task.taskName}/>
                     </li>
                    ))} 
                 </ul>

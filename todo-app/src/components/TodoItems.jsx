@@ -4,8 +4,10 @@ import Tick from "../assets/tick.png"
 import Delete from "../assets/delete.png"
 
 
-
 const TodoItems = ({prop}) => {
+  if(!prop){
+    return null;
+  }
   return (
     <div className='flex items-center my-3 gap-2'>
         <div className='flex flex-1 items-center cursor-pointer'>
